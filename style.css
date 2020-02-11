@@ -53,6 +53,7 @@
     --dark-bg-a:rgba(0,0,0,.5);
 
     /* Blur */
+    --blur-05: blur(5px);
     --blur-10: blur(10px);
     --blur-20: blur(20px);
     --blur-30: blur(30px);
@@ -396,6 +397,58 @@ Responsive Section */
 }
 .unrow .row {
     margin: 0;
+}
+.card {
+    border-radius: 0;
+    background: transparent;
+}
+.team .card {
+    border: none;
+    background: #101010;
+    overflow: hidden;
+}
+.team .card .card-img-top {
+    border-radius:0;
+}
+.team .card:hover .card-img-top {
+    filter: var(--blur-05);
+}
+.team .card .card-body {
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+}
+.team .card:not(:hover) .card-body {
+    transform: translateY(60px);
+}
+.team .card .card-body .btn, .team .card .card-body {
+    transition: all .2s ease-in-out;
+}
+.team .card:not(:hover) .card-body .btn {
+    transform: translateY(50px);
+}
+.front-team .card .card-text {
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+}
+.front-team .card .card-text span {
+    display: block;
+    left: 0;
+    top: 0;
+    transition: all .2s ease-in-out;
+}
+.front-team .card:not(:hover) .card-text span:first-child {
+    transform: translateY(100px);
+}
+.front-team .card:hover .card-text span:first-child {
+    transform: translateY(0);
+}
+.front-team .card:not(:hover) .card-text span:last-child {
+    transform: translateY(-30px);
+}
+.front-team .card:hover .card-text span:last-child {
+    transform: translateY(-100px);
 }
 footer.section .sitelink {
     justify-content: flex-start;
