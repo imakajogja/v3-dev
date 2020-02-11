@@ -1,0 +1,379 @@
+@font-face {
+    font-family: Manrope;
+    src: url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-extrabold.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-extrabold.woff) format("woff"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-extrabold.otf) format("truetype");
+    font-style: normal;
+    font-weight: 800
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-bold.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-bold.woff) format("woff"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-bold.otf) format("truetype");
+    font-style: normal;
+    font-weight: 700
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-semibold.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-semibold.woff) format("woff"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-semibold.otf) format("truetype");
+    font-style: normal;
+    font-weight: 600
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-medium.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-medium.woff) format("woff"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-medium.otf) format("truetype");
+    font-style: normal;
+    font-weight: 500
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-regular.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-regular.woff) format("woff"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-regular.otf) format("truetype");
+    font-style: normal;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-light.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-light.woff) format("woff"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-light.otf) format("truetype");
+    font-style: normal;
+    font-weight: 300
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-thin.woff2) format("woff2"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-thin.woff) format("woff"), url(https://cdn.shopify.com/s/files/1/0267/5189/3575/t/2/assets/manrope-thin.otf) format("truetype");
+    font-style: normal;
+    font-weight: 200
+}
+:root {
+    --primary:#ffcc00;
+    --primary-dark:#ccbb00;
+    --dark-bg:#151515;
+    --dark-bg-a:rgba(0,0,0,.5);
+
+    /* Blur */
+    --blur-10: blur(10px);
+    --blur-20: blur(20px);
+    --blur-30: blur(30px);
+
+    /* Shadow */
+    --shadow-1: 0 10px 35px rgba(0,0,0,.1);
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+/*
+All HTML Tag and Bootstrap Helper Mod */
+html, body {
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    scrollbar-width: 0;
+}
+body {
+    color: #fff;
+    background: #000;
+}
+a {
+    color:var(--primary);
+}
+a:hover {
+    color: var(--primary-dark);
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .8rem;
+}
+.font-weight-bold {
+    font-weight: 500!important;
+}
+.font-weight-bolder {
+    font-weight: 700!important;
+}
+/* Button */
+.btn {
+    font-weight: 500;
+    border-radius: 0px;
+    padding: .5rem 1.75rem;
+}
+.btn:hover {
+    opacity: .8;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:focus {
+    background: var(--primary);
+    border-color: var(--primary);
+    color:var(--dark-bg);
+}
+.btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
+    background: #333;
+    border-color: #333;
+    color:#fff;
+}
+.btn-outline-primary {
+    border-color: var(--primary);
+    color:var(--primary);
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+    background-color: transparent!important;
+    outline: none;
+    box-shadow: 0 0 0 2px inset var(--primary)!important;
+    border-color: var(--primary)!important;
+    color: var(--primary);
+}
+.btn-link {
+    color: var(--primary)!important;
+}
+/* Form Control */
+.form-control {
+    border-radius:0;
+    background: transparent;
+    padding: .5rem .8rem;
+    height: auto;
+    border-color: #777;
+}
+.form-control:hover, .form-control:focus {
+    border-color: var(--primary);
+    background: transparent;
+    color: var(--primary);
+}
+.form-control:hover::placeholder,.form-control:focus::placeholder {
+    color: var(--primary);
+}
+.form-control:focus {
+    box-shadow: 0 0 0 1px inset var(--primary);
+}
+.modal-content {
+    padding: 2.2rem 2rem 0;
+    background: #202020;
+    border: none;
+    border-radius: 0;
+}
+.modal-content .modal-header, .modal-content .modal-footer {
+    padding: 0;
+    border: none;
+}
+.modal-content .modal-header .close {
+    background: #333;
+    color: var(--primary);
+    transform: translateX(2rem) translateY(-2.2rem);
+    margin: 0;
+    padding: .5rem;
+    opacity: 1;
+}
+.modal-content .modal-body {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2.5rem;
+}
+.modal-content .modal-footer {
+    justify-content: flex-start;
+}
+.modal-content .modal-footer .btn {
+    margin: 0;
+    transform: translateX(-2rem);
+}
+.home .list-group, .home .list-group-item {
+    border: none;
+    background: transparent;
+}
+.home .list-group-item {
+    padding: .3rem 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+/*
+Responsive Section */
+/* Desktop View */
+@media screen and (min-width:992px) {
+    .section {
+        padding: 3rem 0;
+    }
+    header.navbar {
+        padding: 1rem 2rem;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 999;
+        transition: all .2s ease-in-out,
+            background 0s;
+    }
+    header.navbar.on-scroll {
+        background: var(--dark-bg);
+        box-shadow: var(--shadow-1);
+    }
+    header.navbar .navbar-brand svg {
+        transition: all .2s ease-in-out;
+    }
+    header.navbar:not(.on-scroll) .navbar-brand svg {
+        width: 42px;
+        height: 42px;
+    }
+    header.navbar.on-scroll .navbar-brand svg {
+        width: 30px;
+        height: 30px;
+    }
+    header.navbar.navbar-expand-lg .navbar-nav .nav-link {
+        font-weight: 700;
+        transition: padding .15s ease-in-out;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    header.navbar.navbar-expand-lg:not(.on-scroll) .navbar-nav .nav-link {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    header.navbar .dropdown-menu {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        display: inherit;
+        transform: scaleY(0);
+        transform-origin: top left;
+        transition: all .2s ease-in-out,
+        background .3s ease-in-out,
+        border-radius .25s ease-in-out;
+        padding: 0;
+    }
+    header.navbar .dropdown-menu.show {
+        background: var(--dark-bg);
+        border-radius: 12px;
+        box-shadow: var(--shadow-1);
+        transform: none;
+        padding:.7rem 0;
+    }
+    header.navbar:not(.on-scroll) .dropdown-menu.show {
+        background: var(--dark-bg-a);
+        backdrop-filter: var(--blur-30);
+    }
+    header.navbar .dropdown-menu:not(.show) .dropdown-item {
+        transform: scale(0);
+    }
+    header.navbar .dropdown-menu.show .dropdown-item {
+        color: #fff;
+        transition: all .2s ease-in-out;
+        padding: .5rem 1.2rem;
+    }
+    header.navbar .dropdown-menu.show .dropdown-item:hover {
+        padding: .5rem 1rem .5rem 1.4rem;
+        background: var(--primary);
+        color: #000;
+    }
+    .carousel-control {
+        bottom: 0;
+        top: inherit;
+        width: inherit;
+        background: var(--primary);
+        opacity: 1;
+        padding: 1rem;
+        color: #000;
+        right: 0;
+        transition: all .2s ease-in-out;
+    }
+    .carousel-control:hover, .carousel-control:focus {
+        background: var(--dark-bg);
+        color: var(--primary);
+    }
+    .carousel-control-prev {
+        left: inherit;
+        bottom: calc(24px + 2rem);
+    }
+    .indicators {
+        display: flex;
+        list-style: none;
+        transform: scaleY(.2);
+        margin: 0;
+        right: inherit;
+        left: 70px;
+        bottom: 4rem;
+    }
+    .indicators li {
+        display: block;
+        background: #fff;
+        float: left;
+        width: 23px;
+        transition: width .2s ease-in-out;
+        position: relative;
+        margin-right: 5px;
+    }
+    .indicators li::before {
+        content: "0" hola;
+    }
+    .indicators li.active {
+        width: 50px;
+        padding: 0;
+        background: var(--primary);
+    }
+    .carousel-caption {
+        padding-bottom: 4rem;
+        left: 75px;
+        right: 75px;
+        text-align: left;
+    }
+    .carousel-caption h2 {
+        font-size: 61px;
+    }
+    .carousel-caption p {
+        font-size: 1.1rem;
+    }
+    .carousel-caption .btn {
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+    .carousel-caption .btn svg {
+        margin-left: 10px;
+    }
+    .modal-backdrop {
+        backdrop-filter: var(--blur-20);
+        background: rgba(0,0,0,.5);
+        opacity: 1!important;
+    }
+    .home .choose-us {
+        padding: 8rem 6rem;
+    }
+    footer.section {
+        background: #111111;
+        padding: 2rem;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:991px) {
+    .home .choose-us {
+        padding: 4rem 2rem;
+    }
+}
+.unrow .row {
+    margin: 0;
+}
+footer.section .sitelink {
+    justify-content: flex-start;
+}
+footer.section .socmed {
+    justify-content: flex-end;
+}
+footer.section .sitelink ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+footer.section .sitelink ul li {
+    float: left;
+}
+footer.section .sitelink ul li:not(:last-child) {
+    margin-right: 10px;
+}
