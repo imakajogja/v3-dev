@@ -106,7 +106,7 @@ a:hover {
 }
 /* Button */
 .btn {
-    font-weight: 500;
+    font-weight: 700;
     border-radius: 0px;
     padding: .5rem 1.75rem;
 }
@@ -124,13 +124,14 @@ a:hover {
     color:#fff;
 }
 .btn-outline-primary {
+    border-width: 2px;
     border-color: var(--primary);
     color:var(--primary);
 }
 .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
     background-color: transparent!important;
     outline: none;
-    box-shadow: 0 0 0 2px inset var(--primary)!important;
+    box-shadow: 0 0 0 1px inset var(--primary)!important;
     border-color: var(--primary)!important;
     color: var(--primary);
 }
@@ -345,6 +346,14 @@ Responsive Section */
     .home .choose-us {
         padding: 8rem 6rem;
     }
+    .cta .container {
+        max-width: 700px;
+    }
+    .cta .container h1 {
+        background: url(https://cdn.shopify.com/s/files/1/0267/5189/3575/products/Ensemble-4K_900x.jpg?v=1576251704);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
     footer.section {
         background: #111111;
         padding: 2rem;
@@ -361,9 +370,6 @@ Responsive Section */
 }
 footer.section .sitelink {
     justify-content: flex-start;
-}
-footer.section .socmed {
-    justify-content: flex-end;
 }
 footer.section .sitelink ul {
     list-style: none;
