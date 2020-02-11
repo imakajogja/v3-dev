@@ -346,6 +346,11 @@ Responsive Section */
     .home .choose-us {
         padding: 8rem 6rem;
     }
+    .cta {
+        --padd:7rem;
+        padding-top: var(--padd);
+        padding-bottom: var(--padd);
+    }
     .cta .container {
         max-width: 700px;
     }
@@ -361,8 +366,29 @@ Responsive Section */
     }
 }
 @media screen and (max-width:991px) {
+    .section {
+        padding: 2rem;
+    }
     .home .choose-us {
         padding: 4rem 2rem;
+    }
+    .cta {
+        background: var(--primary);
+        --padd:4rem;
+        padding-top: var(--padd);
+        padding-bottom: var(--padd);
+        transform: skewY(-3deg);
+    }
+    .cta .btn-outline-primary {
+        border-color:#fff;
+        color: #fff;
+    }
+    .cta .btn-outline-primary:hover {
+        border-color: #000!important;
+        color: #000!important;
+    }
+    footer.section {
+        margin-top: 2rem;
     }
 }
 .unrow .row {
