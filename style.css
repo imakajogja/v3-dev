@@ -351,6 +351,9 @@ Responsive Section */
         padding-top: var(--padd);
         padding-bottom: var(--padd);
     }
+    .cta h1 {
+        line-height: 54px;
+    }
     .cta .container {
         max-width: 700px;
     }
