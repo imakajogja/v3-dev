@@ -202,6 +202,144 @@ a:hover {
     font-weight: 700;
     font-size: 1.5rem;
 }
+.mt-sec {
+    margin-top: var(--padtop);
+}
+.unrow .row {
+    margin: 0;
+}
+.card {
+    border-radius: 0;
+    background: transparent;
+}
+.team .card {
+    border: none;
+    background: #101010;
+    --trans-x:-25px;
+    --trans-y:-15px;
+    transition: var(--all-def);
+}
+.team .card:not(:hover) {
+    overflow: hidden;
+}
+.team .card:hover {
+    transform: translateY(var(--trans-y)) translateX(var(--trans-x));
+}
+.team .card::after {
+    content: "";
+    width: 0;
+    background: var(--primary);
+    height: 100%;
+    right: -15px;
+    top: 15px;
+    position: absolute;
+}
+.team .card:hover::after {
+    width: 13px;
+    transition: var(--all-def);
+    transform-origin: top left;
+}
+.team .card::before {
+    content: "";
+    width: calc(100% - 5px);
+    background: var(--primary);
+    height: 0;
+    left: 15px;
+    bottom: -15px;
+    position: absolute;
+}
+.team .card:hover::before {
+    height: 13px;
+    transition: var(--all-def);
+    transform-origin: top left;
+}
+.team .card .card-img-top {
+    border-radius:0;
+}
+.team .card:not(:hover) .card-img-top {
+    filter: grayscale();
+}
+.team .card .card-body {
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+}
+.team .card:not(:hover) .card-body {
+    transform: translateY(60px);
+}
+.team .card .card-body {
+    transition: var(--all-def);
+}
+.team .card:not(:hover) .card-body .btn {
+    transform: translateY(50px);
+}
+.front-team .card .card-text {
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+}
+.front-team .card .card-text span {
+    display: block;
+    left: 0;
+    top: 0;
+    transition: var(--all-def);
+}
+.front-team .card:not(:hover) .card-text span:first-child {
+    transform: translateY(100px);
+}
+.front-team .card:hover .card-text span:first-child {
+    transform: translateY(0);
+}
+.front-team .card:not(:hover) .card-text span:last-child {
+    transform: translateY(-30px);
+}
+.front-team .card:hover .card-text span:last-child {
+    transform: translateY(-100px);
+}
+.front-team .container {
+    padding: 0;
+}
+.front-team .col-6 {
+    margin-bottom: 30px;
+}
+.show-team .pagination .page-item .page-link {
+    background: transparent;
+    border: none;
+    font-weight: 700;
+    color: var(--primary);
+}
+.widget .list-group .list-group-item {
+    border: none;
+    background: transparent;
+    padding: .3rem 1rem;
+    font-weight: 700;
+}
+footer.section .sitelink {
+    justify-content: flex-start;
+}
+footer.section .sitelink ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+footer.section .sitelink ul li {
+    float: left;
+}
+footer.section .sitelink ul li:not(:last-child) {
+    margin-right: 10px;
+}
+footer.section .social-media .menu-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+footer.section .social-media .menu-list li {
+    float: left;
+}
+footer.section .social-media .menu-list li:not(:last-child) {
+    margin-right: .5rem;
+}
 /*
 Responsive Section */
 /* Desktop View */
@@ -223,6 +361,7 @@ Responsive Section */
             background 0s;
     }
     header.navbar.on-scroll {
+        padding: .5rem 2rem;
         background: rgba(0,0,0,.8);
         backdrop-filter: var(--blur-20);
         border-bottom: 1px solid rgba(255,255,255,.2);
@@ -239,7 +378,7 @@ Responsive Section */
         height: 30px;
     }
     header.navbar.navbar-expand-lg .navbar-nav .nav-link {
-        font-weight: 700;
+        font-weight: 500;
         transition: padding .15s ease-in-out, filter .2s ease-in-out;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -418,6 +557,29 @@ Responsive Section */
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: gray;
     }
+    .show-team .pagination {
+        transform: rotate(-90deg) translateX(180px) translateY(-40px);
+        position: absolute;
+        left: 0;
+        font-size: 2rem;
+    }
+    .show-team .pagination .page-link:not(.disabled)::after {
+        content: "";
+        height: 3px;
+        width: 0;
+        background: var(--primary);
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        transition: var(--all-def);
+    }
+    .show-team .pagination .page-link:not(.disabled):hover::after {
+        width: 100%;
+    }
+    .show-team .pagination .page-link.disabled {
+        color: #fff!important;
+        opacity: .5;
+    }
     .cta {
         --padd:7rem;
         padding-top: var(--padd);
@@ -434,7 +596,7 @@ Responsive Section */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    footer.section {
+    footer.section, .widget {
         padding: 2rem;
         font-size: 14px;
     }
@@ -443,12 +605,18 @@ Responsive Section */
     }
     .has-top-border::before {
         content:"";
-        height: 2px;
+        height: 1px;
         left: 2rem;
         right: 2rem;
-        background: #111111;
+        background: rgba(255,255,255,.2);
         position: absolute;
         top: 0;
+    }
+    .widget img {
+        max-width: 60%;
+    }
+    .widget .list-group {
+        counter-reset: joni;
     }
     footer.section .columns {
         display: flex;
@@ -565,12 +733,6 @@ Responsive Section */
     .home .choose-us {
         padding: 4rem 2rem;
     }
-    .front-team .container {
-        padding: 0;
-    }
-    .front-team .col-6 {
-        margin-bottom: 30px;
-    }
     .navbar-toggler {
         --cube: 40px;
         height: var(--cube);
@@ -623,121 +785,4 @@ Responsive Section */
     footer.section {
         margin-top: 2rem;
     }
-}
-.unrow .row {
-    margin: 0;
-}
-.card {
-    border-radius: 0;
-    background: transparent;
-}
-.team .card {
-    border: none;
-    background: #101010;
-    --trans-x:-25px;
-    --trans-y:-15px;
-    transition: var(--all-def);
-}
-.team .card:not(:hover) {
-    overflow: hidden;
-}
-.team .card:hover {
-    transform: translateY(var(--trans-y)) translateX(var(--trans-x));
-}
-.team .card::after {
-    content: "";
-    width: 0;
-    background: var(--primary);
-    height: 100%;
-    right: -15px;
-    top: 15px;
-    position: absolute;
-}
-.team .card:hover::after {
-    width: 13px;
-    transition: var(--all-def);
-    transform-origin: top left;
-}
-.team .card::before {
-    content: "";
-    width: calc(100% - 5px);
-    background: var(--primary);
-    height: 0;
-    left: 15px;
-    bottom: -15px;
-    position: absolute;
-}
-.team .card:hover::before {
-    height: 13px;
-    transition: var(--all-def);
-    transform-origin: top left;
-}
-.team .card .card-img-top {
-    border-radius:0;
-}
-.team .card:not(:hover) .card-img-top {
-    filter: grayscale();
-}
-.team .card .card-body {
-    padding: 2rem;
-    position: absolute;
-    bottom: 0;
-}
-.team .card:not(:hover) .card-body {
-    transform: translateY(60px);
-}
-.team .card .card-body {
-    transition: var(--all-def);
-}
-.team .card:not(:hover) .card-body .btn {
-    transform: translateY(50px);
-}
-.front-team .card .card-text {
-    position: relative;
-    overflow: hidden;
-    height: 30px;
-}
-.front-team .card .card-text span {
-    display: block;
-    left: 0;
-    top: 0;
-    transition: var(--all-def);
-}
-.front-team .card:not(:hover) .card-text span:first-child {
-    transform: translateY(100px);
-}
-.front-team .card:hover .card-text span:first-child {
-    transform: translateY(0);
-}
-.front-team .card:not(:hover) .card-text span:last-child {
-    transform: translateY(-30px);
-}
-.front-team .card:hover .card-text span:last-child {
-    transform: translateY(-100px);
-}
-footer.section .sitelink {
-    justify-content: flex-start;
-}
-footer.section .sitelink ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-footer.section .sitelink ul li {
-    float: left;
-}
-footer.section .sitelink ul li:not(:last-child) {
-    margin-right: 10px;
-}
-footer.section .social-media .menu-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-footer.section .social-media .menu-list li {
-    float: left;
-}
-footer.section .social-media .menu-list li:not(:last-child) {
-    margin-right: .5rem;
 }
