@@ -223,8 +223,9 @@ Responsive Section */
             background 0s;
     }
     header.navbar.on-scroll {
-        background: var(--dark-bg);
-        box-shadow: var(--shadow-1);
+        background: rgba(0,0,0,.8);
+        backdrop-filter: var(--blur-20);
+        border-bottom: 1px solid rgba(255,255,255,.2);
     }
     header.navbar .navbar-brand svg {
         transition: var(--all-def);
@@ -286,6 +287,44 @@ Responsive Section */
     }
     header.navbar .navbar-nav:hover .nav-link:not(:hover),header.navbar .navbar-nav:hover .nav-link.active {
         filter: var(--blur-05);
+    }
+    header.navbar .search-field:not(.is-active) {
+        transform: translateY(-100%);
+    }
+    header.navbar .search-field {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        padding-right: 5rem;
+        height: 100%;
+        transition: var(--all-def);
+        z-index: 9999;
+        background: #000;
+    }
+    header.navbar .search-field .form-control {
+        border: none;
+        background: transparent;
+        height: 100%;
+        padding-left: 2rem;
+        box-shadow: none;
+        font-weight: 500;
+    }
+    header.navbar .search-field .btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        background: var(--primary);
+        color: var(--dark-bg)!important;
+    }
+    header.navbar .search-field .btn svg {
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+    }
+    header.navbar .nav-button .btn {
+        color: #fff!important;
     }
     .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
         color: var(--primary);
@@ -445,26 +484,6 @@ Responsive Section */
     }
     header.navbar .navbar-collapse {
         padding: 1rem 0;
-    }
-    header.navbar .navbar-collapse .nav-button {
-        transition: var(--all-def);
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-    header.navbar .navbar-collapse:not(.show) .nav-button .btn {
-        transform: scaleY(0);
-        transform-origin: top left;
-    }
-    header.navbar .navbar-collapse .nav-button .btn {
-        border: none!important;
-        box-shadow: none!important;
-        background: var(--primary);
-        color: var(--dark-bg);
-    }
-    header.navbar .navbar-collapse .nav-button .btn:hover {
-        background: var(--dark-bg-a);
-        color: var(--primary);
     }
     .front-banner {
         --height: calc(90vh - var(--padtop));
